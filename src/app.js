@@ -11,16 +11,40 @@ import './app.scss'
 const store = configStore()
 
 class App extends Component {
-
   config = {
     pages: [
-      'pages/home/index'
+      'pages/home/index',
+      'pages/discovery/index',
+      'pages/about/index',
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      color: "#626567",
+      selectedColor: "#6190E8",
+      backgroundColor: "#FBFBFB",
+      borderStyle: "white",
+      list: [{
+        pagePath: "pages/home/index",
+        text: "首页",
+        iconPath: "./asset/images/index.png",
+        selectedIconPath: "./asset/images/index_focus.png"
+      },{
+        pagePath: "pages/discovery/index",
+        text: "发现",
+        iconPath: "./asset/images/discovery.png",
+        selectedIconPath: "./asset/images/discovery_focus.png"
+      }, 
+      {
+        pagePath: "pages/about/index",
+        text: "关于",
+        iconPath: "./asset/images/burger.png",
+        selectedIconPath: "./asset/images/burger_focus.png"
+      }]
     }
   }
 

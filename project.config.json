@@ -2,7 +2,7 @@
 	"miniprogramRoot": "dist/",
 	"projectname": "tjmfa-client",
 	"description": "A web app deved for tjmfa",
-	"appid": "touristappid",
+	"appid": "wxf8596261dca73a49",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,
