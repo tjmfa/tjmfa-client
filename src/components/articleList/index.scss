@@ -1,0 +1,15 @@
+.tj-aticleList{
+  padding: 0 10px;
+  .tj-aticleList-item{
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; 
+    .tj-aticleList-title{ display: block }
+    .tj-aticleList-summary{ display: block }
+    .tj-aticleList-author{ display: block }
+    .tj-aticleList-img{
+      width: 200px;
+      height: 140px;
+      border-radius: 4px; 
+    }
+  }
+}

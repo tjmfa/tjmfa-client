@@ -24,26 +24,25 @@ class App extends Component {
       navigationBarTextStyle: 'black'
     },
     tabBar: {
-      color: "#626567",
-      selectedColor: "#6190E8",
+      color: "#333333",
+      selectedColor: "#6190e8",
       backgroundColor: "#FBFBFB",
       borderStyle: "white",
       list: [{
         pagePath: "pages/home/index",
         text: "首页",
-        iconPath: "./asset/images/index.png",
-        selectedIconPath: "./asset/images/index_focus.png"
-      },{
+        iconPath: "./asset/images/bank.png",
+        selectedIconPath: "./asset/images/bank_focus.png"
+      }, {
         pagePath: "pages/discovery/index",
-        text: "发现",
-        iconPath: "./asset/images/discovery.png",
-        selectedIconPath: "./asset/images/discovery_focus.png"
-      }, 
-      {
+        text: "原著",
+        iconPath: "./asset/images/read.png",
+        selectedIconPath: "./asset/images/read_focus.png"
+      }, {
         pagePath: "pages/about/index",
         text: "关于",
-        iconPath: "./asset/images/burger.png",
-        selectedIconPath: "./asset/images/burger_focus.png"
+        iconPath: "./asset/images/user.png",
+        selectedIconPath: "./asset/images/user_focus.png"
       }]
     }
   }

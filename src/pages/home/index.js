@@ -52,19 +52,19 @@ class Home extends Taro.Component {
 
   render () {
     const swiperList = [
-      { id: 'swiper1', src: 'https://picsum.photos/600/400?image=10' },
-      { id: 'swiper2', src: 'https://picsum.photos/600/400?image=11' },
-      { id: 'swiper3', src: 'https://picsum.photos/600/400?image=12' },
+      { id: 'swiper1', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg' },
+      { id: 'swiper2', src: 'https://picsum.photos/750/400?image=11' },
+      { id: 'swiper3', src: 'https://picsum.photos/750/400?image=12' },
     ];
     const tabList = [
-      { title: '艺术哲学' },
-      { title: '艺术产业' },
-      { title: '博物馆学' },
+      { title: 'Philosophy' },
+      { title: 'Industry' },
+      { title: 'Museology' },
     ];
     const articleList = [
-      { id: 'art1', title: '现代生活的画家', author: '田坤，陈洁', summary: '弗莱在讨论这本书的时候究竟在说什么', src: 'https://picsum.photos/600/400?image=10' },
-      { id: 'art2', title: '印象主义哲学', author: '田坤，陈洁', summary: '弗莱在讨论这本书的时候究竟在说什么', src: 'https://picsum.photos/600/400?image=10' },
-      { id: 'art3', title: '印象主义哲学', author: '田坤，陈洁', summary: '弗莱在讨论这本书的时候究竟在说什么', src: 'https://picsum.photos/600/400?image=10' },
+      { id: 'art1', title: '现代生活的画家 | 波德莱尔', author: '碧纯，陈洁', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg/1280px-The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg' },
+      { id: 'art2', title: '印象主义哲学', author: '田坤，陈洁', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg' },
+      { id: 'art3', title: '印象主义哲学', author: '田坤，陈洁', summary: '美学，古典，绘画', src: 'https://jdc.jd.com/img/200' },
     ]
     const noticeList = [
       { id: 'ntl1', text: '同学们，MFA 马上进入期末考试啦，加油复习噢！' },
@@ -78,7 +78,7 @@ class Home extends Taro.Component {
             swiperList.map(item => 
               <SwiperItem key={item.id}>
                 <View className='tj-home-swiper-item'>
-                  <Image className='tj-home-swiper-image' src={item.src}></Image>
+                  <Image className='tj-home-swiper-image' mode="widthFix" src={item.src}></Image>
                 </View>
               </SwiperItem>)
           }
@@ -91,10 +91,10 @@ class Home extends Taro.Component {
             <TJArticleList data={articleList}/>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={1}>
-            <View style='font-size:18px;text-align:center;height:100px;'>标签页二的内容</View>
+            <TJArticleList data={articleList}/>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={2}>
-            <View style='font-size:18px;text-align:center;height:100px;'>标签页三的内容</View>
+            <TJArticleList data={articleList}/>
           </AtTabsPane>
         </AtTabs>
       </View>
