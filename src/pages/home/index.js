@@ -56,8 +56,8 @@ class Home extends Taro.Component {
   render () {
     const swiperList = [
       { id: 'swiper1', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg' },
-      { id: 'swiper2', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg' },
-      { id: 'swiper3', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg' },
+      { id: 'swiper2', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg/1280px-The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg' },
+      { id: 'swiper3', src: 'https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LSAEhBN4F52pTchVfLa%2F-LTNspr8SsjBNKC7oXw-%2F-LTNsq_IVT36E8_p2jVY%2FBenjamin.jpg?generation=1544458300802530&alt=media' },
     ];
     const tabList = [
       { title: 'Philosophy' },
@@ -65,9 +65,9 @@ class Home extends Taro.Component {
       { title: 'Museology' },
     ];
     const articleList = [
-      { id: 'art1', title: '现代生活的画家 | 波德莱尔', author: '碧纯，小凤', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg/1280px-The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg', link: 'www.baidu.com' },
-      { id: 'art2', title: '印象主义哲学 | 弗莱', author: '田坤，陈洁', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg', link: 'www.baidu.com' },
-      { id: 'art3', title: '技术可复制时代的艺术 | 本雅明', author: '李想，邓登举', summary: '美学，古典，绘画', src: 'https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LSAEhBN4F52pTchVfLa%2F-LTNspr8SsjBNKC7oXw-%2F-LTNsq_IVT36E8_p2jVY%2FBenjamin.jpg?generation=1544458300802530&alt=media', link: 'www.baidu.com' },
+      { id: 'art1', title: '现代生活的画家 | 波德莱尔', author: '碧纯，小凤', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg/1280px-The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg', link: 'https://baidu.com' },
+      { id: 'art2', title: '印象主义哲学 | 弗莱', author: '田坤，陈洁', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg', link: 'https://mp.weixin.qq.com/s/iq8n5tbgx48HZu4KOSB4Ug' },
+      { id: 'art3', title: '技术可复制时代的艺术 | 本雅明', author: '李想，邓登举', summary: '美学，古典，绘画', src: 'https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LSAEhBN4F52pTchVfLa%2F-LTNspr8SsjBNKC7oXw-%2F-LTNsq_IVT36E8_p2jVY%2FBenjamin.jpg?generation=1544458300802530&alt=media', link: 'https://mp.weixin.qq.com/s/iq8n5tbgx48HZu4KOSB4Ug' },
     ]
     const noticeList = [
       { id: 'ntl1', text: '同学们，MFA 马上进入期末考试啦，加油复习噢！' },
@@ -80,9 +80,7 @@ class Home extends Taro.Component {
           {
             swiperList.map(item => 
               <SwiperItem key={item.id}>
-                <View className='tj-home-swiper-item'>
-                  <Image className='tj-home-swiper-image' mode="widthFix" src={item.src}></Image>
-                </View>
+                <Image className='tj-home-swiper-image' mode="aspectFill" src={item.src}></Image>
               </SwiperItem>)
           }
         </Swiper>
