@@ -14,6 +14,16 @@ class TJArticleList extends Taro.Component {
     super(...arguments)
   }
 
+  /**
+   * 事件-点击文章
+   * @param {String} value 文章链接地址
+   */
+  handleArticleClick (value) {
+    Taro.navigateTo({
+      url: `/pages/out/index?url=${value}`
+    })
+  }
+
   componentWillReceiveProps (nextProps) {
     console.log(this.props, nextProps)
   }
@@ -26,22 +36,24 @@ class TJArticleList extends Taro.Component {
 
   render () {
     return (
-      <View className='tj-aticleList'>
+      <View className='tj-articleList'>
         {
           this.props.data.map(item => 
-            <View className='at-row tj-aticleList-item' key={item.id}>
-              <View className='at-col at-col-4'>
-                <Image className='tj-aticleList-img' src={item.src}></Image>
+            <View className='at-row tj-articleList-item at-row__justify--between' key={item.id} onClick={this.handleArticleClick.bind(this, item.link)}>
+              <View className='at-col at-col-3'>
+                <Image className='tj-articleList-img' mode="aspectFill" src={item.src}></Image>
               </View>
-              <View className='at-col at-col-8'>
-                <Text className='at-article__h3 tj-aticleList-title'>{item.title}</Text>
+              <View className='at-col at-col-9'>
+                <Text className='at-article__h3 tj-articleList-title'>{item.title}</Text>
+                <Text className='at-article__info tj-articleList-author'>{item.author}</Text>
+                <View className='tj-articleList-tags'>
                   {/* {
                     item.summary.split('，').map(ele => <AtTag type='primary' size='small' circle>{ ele }</AtTag>)
                   } */}
                   <AtTag type='primary' size='small' circle>{ item.summary.split('，')[0] }</AtTag>
                   <AtTag type='primary' size='small' circle>{ item.summary.split('，')[1] }</AtTag>
                   <AtTag type='primary' size='small' circle>{ item.summary.split('，')[2] }</AtTag>
-                <Text className='at-article__info tj-aticleList-author'>{item.author}</Text>
+                </View>
               </View>
             </View>)
         }

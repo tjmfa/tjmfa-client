@@ -27,7 +27,10 @@ class Home extends Taro.Component {
     }
   }
   config = {
-    navigationBarTitleText: 'TJMFA'
+    navigationBarTitleText: 'TJMFA',
+    pages: [
+      'pages/out/index'
+    ],
   }
 
   componentWillReceiveProps (nextProps) {
@@ -53,8 +56,8 @@ class Home extends Taro.Component {
   render () {
     const swiperList = [
       { id: 'swiper1', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg' },
-      { id: 'swiper2', src: 'https://picsum.photos/750/400?image=11' },
-      { id: 'swiper3', src: 'https://picsum.photos/750/400?image=12' },
+      { id: 'swiper2', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg' },
+      { id: 'swiper3', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg' },
     ];
     const tabList = [
       { title: 'Philosophy' },
@@ -62,9 +65,9 @@ class Home extends Taro.Component {
       { title: 'Museology' },
     ];
     const articleList = [
-      { id: 'art1', title: '现代生活的画家 | 波德莱尔', author: '碧纯，陈洁', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg/1280px-The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg' },
-      { id: 'art2', title: '印象主义哲学', author: '田坤，陈洁', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg' },
-      { id: 'art3', title: '印象主义哲学', author: '田坤，陈洁', summary: '美学，古典，绘画', src: 'https://jdc.jd.com/img/200' },
+      { id: 'art1', title: '现代生活的画家 | 波德莱尔', author: '碧纯，小凤', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg/1280px-The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg', link: 'www.baidu.com' },
+      { id: 'art2', title: '印象主义哲学 | 弗莱', author: '田坤，陈洁', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg', link: 'www.baidu.com' },
+      { id: 'art3', title: '技术可复制时代的艺术 | 本雅明', author: '李想，邓登举', summary: '美学，古典，绘画', src: 'https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LSAEhBN4F52pTchVfLa%2F-LTNspr8SsjBNKC7oXw-%2F-LTNsq_IVT36E8_p2jVY%2FBenjamin.jpg?generation=1544458300802530&alt=media', link: 'www.baidu.com' },
     ]
     const noticeList = [
       { id: 'ntl1', text: '同学们，MFA 马上进入期末考试啦，加油复习噢！' },
