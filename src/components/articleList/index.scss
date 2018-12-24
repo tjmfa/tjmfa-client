@@ -1,15 +1,16 @@
-.tj-aticleList{
+.tj-articleList{
   padding: 0 10px;
-  .tj-aticleList-item{
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc; 
-    .tj-aticleList-title{ display: block }
-    .tj-aticleList-summary{ display: block }
-    .tj-aticleList-author{ display: block }
-    .tj-aticleList-img{
-      width: 200px;
+  .tj-articleList-item{
+    padding: 20px 0;
+    border-bottom: 1px solid #F0F0F0; 
+    .tj-articleList-title{ display: block }
+    .tj-articleList-summary{ display: block }
+    .tj-articleList-author{ display: block }
+    .tj-articleList-img{
+      width: 100%;
       height: 140px;
       border-radius: 4px; 
     }
+    .tj-articleList-tags{ margin: 10px 30px; }
   }
 }
