@@ -60,9 +60,9 @@ class Home extends Taro.Component {
       { id: 'swiper3', src: 'https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LSAEhBN4F52pTchVfLa%2F-LTNspr8SsjBNKC7oXw-%2F-LTNsq_IVT36E8_p2jVY%2FBenjamin.jpg?generation=1544458300802530&alt=media' },
     ];
     const tabList = [
-      { title: 'Philosophy' },
-      { title: 'Industry' },
-      { title: 'Museology' },
+      { title: '艺术哲学' },
+      { title: '艺术产业' },
+      { title: '博物馆学' },
     ];
     const articleList = [
       { id: 'art1', title: '现代生活的画家 | 波德莱尔', author: '碧纯，小凤', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg/1280px-The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg', link: 'https://baidu.com' },
@@ -76,6 +76,9 @@ class Home extends Taro.Component {
     ]
     return (
       <View className='tj-home'>
+        <AtNoticebar className='tj-home-notice' marquee icon='volume-plus' speed={50}>
+          { noticeList.map(item => item.text).reduce((p, v) => p + v) }
+        </AtNoticebar>
         <Swiper className='tj-home-swiper' indicatorColor='#999' indicatorActiveColor='#333' circular indicatorDots autoplay>
           {
             swiperList.map(item => 
@@ -84,9 +87,6 @@ class Home extends Taro.Component {
               </SwiperItem>)
           }
         </Swiper>
-        <AtNoticebar className='tj-home-notice' marquee icon='volume-plus' speed={50}>
-          { noticeList.map(item => item.text).reduce((p, v) => p + v) }
-        </AtNoticebar>
         <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleTabsClick.bind(this)}>
           <AtTabsPane current={this.state.current} index={0}>
             <TJArticleList data={articleList}/>

@@ -1,7 +1,7 @@
 import Taro from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import { AtGrid } from 'taro-ui'
+import { AtGrid, AtDivider } from 'taro-ui'
 import { add, minus, asyncAdd } from '../../actions/counter'
 import './index.scss'
 
@@ -43,11 +43,11 @@ class Discovery extends Taro.Component {
           [
             {
               image: 'https://jdc.jd.com/img/200',
-              value: '尼采'
+              value: '波德莱尔'
             },
             {
               image: 'https://jdc.jd.com/img/200',
-              value: '本雅明'
+              value: '尼采'
             },
             {
               image: 'https://jdc.jd.com/img/200',
@@ -55,23 +55,48 @@ class Discovery extends Taro.Component {
             },
             {
               image: 'https://jdc.jd.com/img/200',
-              value: '波德莱尔'
-            },
-            {
-              image: 'https://jdc.jd.com/img/200',
               value: '弗洛依德'
             },
             {
               image: 'https://jdc.jd.com/img/200',
-              value: '杰夫昆斯'
-            }
+              value: '克莱夫·贝尔'
+            },
+            {
+              image: 'https://jdc.jd.com/img/200',
+              value: '海德格尔'
+            },
+            {
+              image: 'https://jdc.jd.com/img/200',
+              value: '本雅明'
+            },
+            {
+              image: 'https://jdc.jd.com/img/200',
+              value: '格林伯格'
+            },
+            {
+              image: 'https://jdc.jd.com/img/200',
+              value: '霍克海默'
+            },
+            {
+              image: 'https://jdc.jd.com/img/200',
+              value: '丹尼尔·贝尔'
+            },
+            {
+              image: 'https://jdc.jd.com/img/200',
+              value: '丹托'
+            },
+            {
+              image: 'https://jdc.jd.com/img/200',
+              value: '蔡国强'
+            },
           ]
         } />
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
+        {/* <Button className='add_btn' onClick={this.props.add}>+</Button>
         <Button className='dec_btn' onClick={this.props.dec}>-</Button>
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{this.props.counter.num}</Text></View>
-        <View><Text>Discovery</Text></View>
+        <View><Text>Discovery</Text></View> */}
+        <AtDivider content='艺术是有底线的' fontColor='#E5E5E5' lineColor='#f0f0f0' />
       </View>
     )
   }

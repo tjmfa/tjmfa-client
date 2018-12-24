@@ -15,6 +15,7 @@ class App extends Component {
     pages: [
       'pages/home/index',
       'pages/discovery/index',
+      'pages/map/index',
       'pages/about/index',
       'pages/out/index',
     ],
@@ -39,6 +40,11 @@ class App extends Component {
         text: "原著",
         iconPath: "./asset/images/read.png",
         selectedIconPath: "./asset/images/read_focus.png"
+      }, {
+        pagePath: "pages/map/index",
+        text: "有展",
+        iconPath: "./asset/images/location.png",
+        selectedIconPath: "./asset/images/location_focus.png"
       }, {
         pagePath: "pages/about/index",
         text: "关于",

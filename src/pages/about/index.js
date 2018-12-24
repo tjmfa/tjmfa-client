@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro'
-import { View, Button, Text } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { AtAvatar, AtList, AtListItem } from 'taro-ui'
 import { connect } from '@tarojs/redux'
 
@@ -75,6 +75,7 @@ class About extends Taro.Component {
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{this.props.counter.num}</Text></View>
         <View><Text>About</Text></View> */}
+        
       </View>
     )
   }
