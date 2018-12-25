@@ -1,6 +1,8 @@
 import Taro from '@tarojs/taro'
 import { Map, View } from '@tarojs/components'
 import { AtSearchBar } from 'taro-ui'
+import icon_location from '../../asset/images/location-fill.png'
+import icon_gps from '../../asset/images/gps-fixed.png'
 import './index.scss'
 
 class TJMap extends Taro.Component {
@@ -33,12 +35,12 @@ class TJMap extends Taro.Component {
   render () {
     const data = {
       markers: [{
-        iconPath: '/resources/others.png',
+        iconPath: icon_location,
         id: 0,
-        latitude: 23.099994,
-        longitude: 113.324520,
-        width: 50,
-        height: 50
+        latitude: 31.282628,
+        longitude: 121.501830,
+        width: 20,
+        height: 20
       }],
       polyline: [{
         points: [{
@@ -54,12 +56,12 @@ class TJMap extends Taro.Component {
       }],
       controls: [{
         id: 1,
-        iconPath: '/resources/location.png',
+        iconPath: icon_gps,
         position: {
           left: 0,
           top: 300 - 50,
-          width: 50,
-          height: 50
+          width: 20,
+          height: 20
         },
         clickable: true
       }]
@@ -72,9 +74,9 @@ class TJMap extends Taro.Component {
         />
         <Map 
           id="map"
-          longitude="113.324520"
-          latitude="23.099994"
-          scale="14"
+          longitude="121.501830"
+          latitude="31.282628"
+          scale="12"
           controls={data.controls}
           onControlTap={this.controltap.bind(this)}
           markers={data.markers}
