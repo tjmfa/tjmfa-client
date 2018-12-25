@@ -1,5 +1,6 @@
 {
 	"miniprogramRoot": "dist/",
+	"cloudfunctionRoot": "cloudfunctions/",
 	"projectname": "tjmfa-client",
 	"description": "A web app deved for tjmfa",
 	"appid": "wxa2a487adeee7be4c",
@@ -11,5 +12,6 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
 	"condition": {}
 }

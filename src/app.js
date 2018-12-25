@@ -54,7 +54,22 @@ class App extends Component {
     }
   }
 
-  componentDidMount () {}
+  componentDidMount () {
+    wx.cloud.init({
+      traceUser: true
+    })
+    wx.cloud.callFunction({
+      name: 'tjmfaFunc',
+      data: {
+        a: 1,
+        b: 2
+      }
+    }).then((res) => {
+        console.log(res);
+    }).catch((e) => {
+        console.log(e);
+    });
+  }
 
   componentDidShow () {}
 

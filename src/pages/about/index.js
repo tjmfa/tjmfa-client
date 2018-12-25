@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { AtAvatar, AtList, AtListItem } from 'taro-ui'
+import { AtAvatar, AtList, AtListItem, AtButton } from 'taro-ui'
 import { connect } from '@tarojs/redux'
 
 import { add, minus, asyncAdd } from '../../actions/counter'
@@ -48,6 +48,7 @@ class About extends Taro.Component {
             title='意见反馈'
             extraText='￣▽￣'
             iconInfo={{ size: 25, color: '#78A4FA', value: 'mail', }}
+            onClick={this.handle.bind(this)}
           />
           <AtListItem
             title='开发者'
@@ -75,7 +76,7 @@ class About extends Taro.Component {
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{this.props.counter.num}</Text></View>
         <View><Text>About</Text></View> */}
-        
+        <AtButton type='secondary' size='normal' openType="contact">按钮文案</AtButton>
       </View>
     )
   }
