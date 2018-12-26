@@ -1,7 +1,7 @@
 import '@tarojs/async-await'
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
-
+import { queryBookList } from './service/api'
 import Home from './pages/home'
 
 import configStore from './store'
@@ -55,19 +55,12 @@ class App extends Component {
   }
 
   componentDidMount () {
-    wx.cloud.init({
-      traceUser: true
-    })
-    wx.cloud.callFunction({
-      name: 'tjmfaFunc',
-      data: {
-        a: 1,
-        b: 2
-      }
+    // 发起请求
+    queryBookList({
+      a: 1,
+      b: 2
     }).then((res) => {
-        console.log(res);
-    }).catch((e) => {
-        console.log(e);
+      console.log(res)
     });
   }
 

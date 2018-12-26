@@ -47,9 +47,6 @@ class TJArticleList extends Taro.Component {
                 <Text className='at-article__h3 tj-articleList-title'>{item.title}</Text>
                 <Text className='at-article__info tj-articleList-author'>{item.author}</Text>
                 <View className='tj-articleList-tags'>
-                  {/* {
-                    item.summary.split('，').map(ele => <AtTag type='primary' size='small' circle>{ ele }</AtTag>)
-                  } */}
                   <AtTag type='primary' size='small' circle>{ item.summary.split('，')[0] }</AtTag>
                   <AtTag type='primary' size='small' circle>{ item.summary.split('，')[1] }</AtTag>
                   <AtTag type='primary' size='small' circle>{ item.summary.split('，')[2] }</AtTag>
