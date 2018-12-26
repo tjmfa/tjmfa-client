@@ -18,6 +18,7 @@ class App extends Component {
       'pages/map/index',
       'pages/about/index',
       'pages/out/index',
+      'pages/book/index',
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -32,12 +33,12 @@ class App extends Component {
       borderStyle: "white",
       list: [{
         pagePath: "pages/home/index",
-        text: "首页",
+        text: "殿堂",
         iconPath: "./asset/images/bank.png",
         selectedIconPath: "./asset/images/bank_focus.png"
       }, {
         pagePath: "pages/discovery/index",
-        text: "原著",
+        text: "名著",
         iconPath: "./asset/images/read.png",
         selectedIconPath: "./asset/images/read_focus.png"
       }, {

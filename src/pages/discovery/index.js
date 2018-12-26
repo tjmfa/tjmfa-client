@@ -36,6 +36,12 @@ class Discovery extends Taro.Component {
 
   componentDidHide () { }
 
+  handleClick() {
+    Taro.navigateTo({
+      url: '/pages/book/index'
+    })
+  }
+
   render () {
     return (
       <View className='index'>
@@ -90,7 +96,7 @@ class Discovery extends Taro.Component {
               value: '蔡国强'
             },
           ]
-        } />
+        } onClick={this.handleClick.bind(this)}/>
         {/* <Button className='add_btn' onClick={this.props.add}>+</Button>
         <Button className='dec_btn' onClick={this.props.dec}>-</Button>
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>

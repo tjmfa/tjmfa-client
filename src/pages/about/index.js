@@ -38,6 +38,21 @@ class About extends Taro.Component {
 
   componentDidHide () { }
 
+  handleClick() {
+    wx.downloadFile({
+      // 示例 url，并非真实存在
+      url: 'https://7465-tes-5bf8f1-1253291516.tcb.qcloud.la/艺术哲学/01-波德莱尔-现代生活的画家（选）.pdf?sign=6cc6222a097be99ff435b91d31219911&t=1545828444',
+      success(res) {
+        const filePath = res.tempFilePath
+        wx.openDocument({
+          filePath,
+          success(res) {
+            console.log('打开文档成功')
+          }
+        })
+      }
+    })
+  }
 
   render () {
     return (
@@ -48,7 +63,7 @@ class About extends Taro.Component {
             title='意见反馈'
             extraText='￣▽￣'
             iconInfo={{ size: 25, color: '#78A4FA', value: 'mail', }}
-            onClick={this.handle.bind(this)}
+            onClick={this.handleClick.bind(this)}
           />
           <AtListItem
             title='开发者'
@@ -76,7 +91,7 @@ class About extends Taro.Component {
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{this.props.counter.num}</Text></View>
         <View><Text>About</Text></View> */}
-        <AtButton type='secondary' size='normal' openType="contact">按钮文案</AtButton>
+        {/* <AtButton type='secondary' size='normal' openType="contact">客户服务</AtButton> */}
       </View>
     )
   }

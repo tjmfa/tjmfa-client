@@ -1,0 +1,58 @@
+.tj-book{
+  height: 1100px;
+  .tj-book-warp{
+    padding-top: 100px;
+    .tj-book-card{
+      width: 80%;
+      height: 760px;
+      padding: 20px;
+      padding-top: 100px;
+      margin: 0 auto;
+      border-radius: 10px;
+      background-color: #fff;
+      text-align: center;
+      -webkit-transition: all .4s;
+      transition: all .4s;
+      cursor: pointer;
+      box-shadow: 0 10px 40px rgba(21,147,255,.1);
+      -moz-user-select: -moz-none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      text-decoration: none;
+      text-align: center;
+    }
+    .tj-book-title{
+      display: block;
+      font-size: 50px;
+      color: #333333;
+    }
+    .tj-book-author{
+      display: block;
+      font-size: 40px;
+      color: #333333;
+    }
+    .tj-book-year{
+      display: block;
+      font-size: 30px;
+      color: #333333;
+    }
+    .tj-book-skelon{
+      background-color: #f7f7f7;
+      width: 80%;
+      height: 60px;
+      margin: 20px;
+    }
+    .tj-book-btn{
+      width: 300px;
+      height: 80px;
+      margin-top: 60px;
+      font-size: 40px; 
+      line-height: 80px;
+      border-radius: 40px;
+      border: 1px solid #78A4FA;
+      background-color: #78A4FA;
+      color: #fff;
+      margin: auto;
+    }
+  }
+}
