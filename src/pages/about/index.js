@@ -39,31 +39,22 @@ class About extends Taro.Component {
   componentDidHide () { }
 
   handleClick() {
-    wx.downloadFile({
-      // 示例 url，并非真实存在
-      url: 'https://7465-tes-5bf8f1-1253291516.tcb.qcloud.la/艺术哲学/01-波德莱尔-现代生活的画家（选）.pdf?sign=6cc6222a097be99ff435b91d31219911&t=1545828444',
-      success(res) {
-        const filePath = res.tempFilePath
-        wx.openDocument({
-          filePath,
-          success(res) {
-            console.log('打开文档成功')
-          }
-        })
-      }
+    wx.previewImage({
+      current: 'https://7465-tes-5bf8f1-1253291516.tcb.qcloud.la/推广/qrcode_for_gh_9c6b3fc63260_258.jpg?sign=e2d5d83007c57cf398d8d3d82e91813a&t=1545886912', // 当前显示图片的http链接
+      urls: ['https://7465-tes-5bf8f1-1253291516.tcb.qcloud.la/推广/qrcode_for_gh_9c6b3fc63260_258.jpg?sign=e2d5d83007c57cf398d8d3d82e91813a&t=1545886912'] // 需要预览的图片http链接列表
     })
   }
 
   render () {
     return (
       <View className='tj-about'>
-        <AtAvatar className='tj-about-avatar' circle size="large" image={avatar}></AtAvatar>
+        <AtAvatar className='tj-about-avatar' circle size="large" openData={{ type: 'userAvatarUrl' }}></AtAvatar>
+        <open-data className='tj-about-username' type="userNickName"></open-data>
         <AtList>
           <AtListItem
             title='意见反馈'
             extraText='￣▽￣'
             iconInfo={{ size: 25, color: '#78A4FA', value: 'mail', }}
-            onClick={this.handleClick.bind(this)}
           />
           <AtListItem
             title='开发者'
@@ -74,6 +65,7 @@ class About extends Taro.Component {
             title='公众号'
             extraText='TJMFA'
             iconInfo={{ size: 25, color: '#78A4FA', value: 'share', }}
+            onClick={this.handleClick.bind(this)}
           />
           <AtListItem
             title='捐赠'

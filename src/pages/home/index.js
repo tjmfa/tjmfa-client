@@ -70,8 +70,8 @@ class Home extends Taro.Component {
     ]
 
     const mock_Art_Industry = [
-      { id: 'art_0', title: '印象主义哲学 | 弗莱', author: '田坤，陈洁', summary: '美学，古典，绘画', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg', link: 'https://mp.weixin.qq.com/s/iq8n5tbgx48HZu4KOSB4Ug' },
-      { id: 'art_1', title: '技术可复制时代的艺术 | 本雅明', author: '李想，邓登举', summary: '美学，古典，绘画', src: 'https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LSAEhBN4F52pTchVfLa%2F-LTNspr8SsjBNKC7oXw-%2F-LTNsq_IVT36E8_p2jVY%2FBenjamin.jpg?generation=1544458300802530&alt=media', link: 'https://mp.weixin.qq.com/s/iq8n5tbgx48HZu4KOSB4Ug' },
+      { id: 'art_0', title: '戳穿每一个图像后面的诡计', author: '陆兴华', summary: '美学，古典，绘画', src: '', link: 'https://mp.weixin.qq.com/s/dlObGfSEoqUN69WhKsrAyw' },
+      { id: 'art_1', title: '丛林如何思考', author: '邓登举', summary: '魔幻，生物，亚马逊', src: 'https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LSAEhBN4F52pTchVfLa%2F-LTNspr8SsjBNKC7oXw-%2F-LTNsq_IVT36E8_p2jVY%2FBenjamin.jpg?generation=1544458300802530&alt=media', link: 'https://mp.weixin.qq.com/s/iq8n5tbgx48HZu4KOSB4Ug' },
     ]
 
     const mock_Museology = [
@@ -82,8 +82,8 @@ class Home extends Taro.Component {
 
     const noticeList = [
       { id: 'ntl1', text: '同学们，MFA 马上进入期末考试啦，加油复习噢！' },
-      { id: 'ntl2', text: '12 月 23 日 陆老师带我们去上海双年展啦！' },
-      { id: 'ntl3', text: '12 月 31 日 孙老师带队去文物商店啦！' },
+      { id: 'ntl2', text: '12 月 23 日 参加上海双年展！' },
+      { id: 'ntl3', text: '12 月 31 日 游览文物商店！' },
     ]
     return (
       <View className='tj-home'>

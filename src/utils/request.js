@@ -1,7 +1,7 @@
 /**
  * 封装-请求云函数
- * @param {String} name 
- * @param {Object} data 
+ * @param {String} name 云函数名称
+ * @param {Object} data 携带参数
  */
 export default async function request(name, data) {
   wx.cloud.init({

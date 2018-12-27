@@ -76,7 +76,7 @@ class TJMap extends Taro.Component {
           id="map"
           longitude="121.501830"
           latitude="31.282628"
-          scale="14"
+          scale="16"
           controls={data.controls}
           onControlTap={this.controltap.bind(this)}
           markers={data.markers}
@@ -86,6 +86,7 @@ class TJMap extends Taro.Component {
           show-location
           style="width: 100%; height: 400px;"
         />
+        <official-account></official-account>
       </View>
     )
   }
