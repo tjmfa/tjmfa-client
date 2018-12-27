@@ -8,48 +8,53 @@ class Book extends Taro.Component {
   constructor () {
     super(...arguments)
     this.state = {
-      url: 'https://mp.weixin.qq.com/',
       isOpened: false,
+      progress: '加载中',
+      current: 0,
     }
   }
   config = {
     navigationBarTitleText: '阅读'
   }
   componentWillMount () {
-    this.setState({ url: this.$router.params.url });
+    this.setState({ current: this.$router.params.bookid });
   }
 
   handleDownload(url) {
-    this.setState({ isOpened: true });
-    wx.downloadFile({
-      // 示例 url，并非真实存在
+    const downloadTask = wx.downloadFile({
       url,
       success(res) {
         const filePath = res.tempFilePath
         wx.openDocument({
           filePath,
           success(res) {
-            console.log('打开文档成功');
-            this.setState({ isOpened: false });
+            console.log('文件打开成功：', res);
           }
         })
+      }
+    })
+    downloadTask.onProgressUpdate(res => {
+      if(res.progress == 100) {
+        this.setState({ isOpened: false, progress: '加载中' });
+      }else{
+        this.setState({ isOpened: true, progress: `${res.progress}%` });
       }
     })
   }
 
   render () {
+    const { current } = this.state;
     return (
       <View>
         <Swiper
           className='tj-book'
           indicatorColor='#999'
           indicatorActiveColor='#333'
-          circular
           indicatorDots
-          autoplay>
+          current={current}>
           {
             mock_book.map(item => 
-              <SwiperItem className='tj-book-warp'>
+              <SwiperItem className='tj-book-warp' key={item.id}>
                 <View className='tj-book-card' onClick={this.handleDownload.bind(this, item.link)}>
                   <Text className='tj-book-title'>{item.title}</Text>
                   <Text className='tj-book-author'>{item.author}</Text>
@@ -57,7 +62,7 @@ class Book extends Taro.Component {
                   <View className='tj-book-skelon' style={{ width: '80%', marginTop: '50px' }}></View>
                   <View className='tj-book-skelon' style={{ width: '60%' }}></View>
                   <View className='tj-book-skelon' style={{ width: '40%', marginBottom: '50px' }}></View>
-                  <View className='tj-book-btn'>直接下载</View>
+                  <View className='tj-book-btn'>直接阅读</View>
                 </View>
               </SwiperItem>
             )
@@ -65,7 +70,8 @@ class Book extends Taro.Component {
         </Swiper>
         <AtToast
           isOpened={this.state.isOpened}
-          text='加载中'
+          text={this.state.progress}
+          hasMask
           status="loading"/>
       </View>
     )

@@ -1,4 +1,8 @@
 .tj-about{
-  .tj-about-avatar{ margin: 60px auto; }
-  .tj-about-username{ text-align: center }
+  .tj-about-user{
+    margin: 60px auto;
+    .tj-about-avatar{ margin: 0 auto 30px; }
+    .tj-about-name{ text-align: center }
+  }
+  
 }

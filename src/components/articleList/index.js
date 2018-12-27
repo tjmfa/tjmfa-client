@@ -25,7 +25,7 @@ class TJArticleList extends Taro.Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    console.log(this.props, nextProps)
+    //console.log(this.props, nextProps)
   }
 
   componentWillUnmount () { }

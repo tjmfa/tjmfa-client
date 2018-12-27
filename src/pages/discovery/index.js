@@ -36,9 +36,9 @@ class Discovery extends Taro.Component {
 
   componentDidHide () { }
 
-  handleClick() {
+  handleClick(item, index) {
     Taro.navigateTo({
-      url: '/pages/book/index'
+      url: `/pages/book/index?bookid=${index}`
     })
   }
 

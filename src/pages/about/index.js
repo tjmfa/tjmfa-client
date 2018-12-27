@@ -48,8 +48,12 @@ class About extends Taro.Component {
   render () {
     return (
       <View className='tj-about'>
-        <AtAvatar className='tj-about-avatar' circle size="large" openData={{ type: 'userAvatarUrl' }}></AtAvatar>
-        <open-data className='tj-about-username' type="userNickName"></open-data>
+        <View className='tj-about-user'>
+          <AtAvatar className='tj-about-avatar' circle size="large" openData={{ type: 'userAvatarUrl' }}></AtAvatar>
+          <View className='tj-about-name'>
+            <open-data type="userNickName"></open-data>
+          </View>
+        </View>
         <AtList>
           <AtListItem
             title='意见反馈'
