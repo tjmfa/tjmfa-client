@@ -1,6 +1,7 @@
 import Taro from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import { AtTag } from 'taro-ui'
+import PropTypes from 'prop-types';
 import './index.scss'
 
 if (process.env.TARO_ENV === "weapp") {
@@ -12,6 +13,10 @@ if (process.env.TARO_ENV === "weapp") {
 class TJArticleList extends Taro.Component {
   constructor () {
     super(...arguments)
+  }
+
+  static defaultProps = {
+    data: []
   }
 
   /**
@@ -57,6 +62,10 @@ class TJArticleList extends Taro.Component {
       </View>
     )
   }
+}
+
+TJArticleList.propTypes = {
+  data: PropTypes.array
 }
 
 export default TJArticleList

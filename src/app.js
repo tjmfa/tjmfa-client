@@ -57,12 +57,12 @@ class App extends Component {
 
   componentDidMount () {
     // 发起请求
-    queryBookList({
-      a: 1,
-      b: 2
-    }).then((res) => {
-      console.log(res)
-    });
+    // queryBookList({
+    //   a: 1,
+    //   b: 2
+    // }).then((res) => {
+    //   console.log(res)
+    // });
   }
 
   componentDidShow () {}

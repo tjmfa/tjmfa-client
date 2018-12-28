@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro'
-import { View, Image, Text } from '@tarojs/components'
+import { View, Image} from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 import { AtTabs, AtTabsPane, Swiper, SwiperItem, AtNoticebar } from 'taro-ui'
 import TJArticleList from '../../components/articleList/index'
@@ -58,20 +58,19 @@ class Home extends Taro.Component {
   render () {
     const swiperList = [
       { id: 'swiper1', src: 'https://7465-tes-5bf8f1-1253291516.tcb.qcloud.la/轮播/梵高-星夜.jpg?sign=622ac0de9229e2a31006605bb57a5c4e&t=1545925402' },
-      { id: 'swiper2', src: 'https://7465-tes-5bf8f1-1253291516.tcb.qcloud.la/轮播/梵高-星夜.jpg?sign=622ac0de9229e2a31006605bb57a5c4e&t=1545925402' },
-      { id: 'swiper3', src: 'https://7465-tes-5bf8f1-1253291516.tcb.qcloud.la/轮播/梵高-星夜.jpg?sign=622ac0de9229e2a31006605bb57a5c4e&t=1545925402' },
+      { id: 'swiper2', src: 'https://7465-tes-5bf8f1-1253291516.tcb.qcloud.la/推广/佛洛依德.jpg?sign=fb403e727596e8297b35b1bad9759971&t=1545977159' }
     ];
     const noticeList = [
       { id: 'ntl1', text: '同学们，MFA 马上进入期末考试啦，加油复习噢！' },
       { id: 'ntl2', text: '12 月 23 日 参加上海双年展！' },
-      { id: 'ntl3', text: '12 月 31 日 游览文物商店！' },
+      { id: 'ntl3', text: '12 月 29 日 游览文物商店！' },
     ]
     return (
       <View className='tj-home'>
         <AtNoticebar className='tj-home-notice' marquee icon='volume-plus' speed={50}>
           { noticeList.map(item => item.text).reduce((p, v) => p + v) }
         </AtNoticebar>
-        <Swiper className='tj-home-swiper' indicatorColor='#999' indicatorActiveColor='#333' circular indicatorDots autoplay>
+        <Swiper className='tj-home-swiper' indicatorColor='#999' indicatorActiveColor='#333' circular autoplay>
           {
             swiperList.map(item => 
               <SwiperItem key={item.id}>
