@@ -28,15 +28,17 @@ class About extends Taro.Component {
     navigationBarTitleText: 'TJMFA'
   }
 
-  componentWillReceiveProps (nextProps) {
-    console.log(this.props, nextProps)
+  // 转发设置
+  onShareAppMessage() {
+    return {
+      title: '同济MFA阅读小站上线啦！',
+      success(e) {
+        wx.showShareMenu({
+          withShareTicket: true
+        })
+      }
+    }
   }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
 
   handleClick() {
     wx.previewImage({

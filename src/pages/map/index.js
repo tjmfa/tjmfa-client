@@ -15,9 +15,19 @@ class TJMap extends Taro.Component {
   config = {
     navigationBarTitleText: 'TJMFA'
   }
-  componentWillMount () {
-    
+  
+  // 转发设置
+  onShareAppMessage() {
+    return {
+      title: '同济MFA阅读小站上线啦！',
+      success(e) {
+        wx.showShareMenu({
+          withShareTicket: true
+        })
+      }
+    }
   }
+
   onChange (value) {
     this.setState({
       value: value

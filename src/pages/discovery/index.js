@@ -30,6 +30,18 @@ class Discovery extends Taro.Component {
     console.log(this.props, nextProps)
   }
 
+  // 转发设置
+  onShareAppMessage() {
+    return {
+      title: '同济MFA阅读小站上线啦！',
+      success(e) {
+        wx.showShareMenu({
+          withShareTicket: true
+        })
+      }
+    }
+  }
+
   componentWillUnmount () { }
 
   componentDidShow () { }

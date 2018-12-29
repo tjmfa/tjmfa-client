@@ -20,6 +20,18 @@ class Book extends Taro.Component {
     this.setState({ current: this.$router.params.bookid });
   }
 
+  // 转发设置
+  onShareAppMessage() {
+    return {
+      title: '同济MFA阅读小站上线啦！',
+      success(e) {
+        wx.showShareMenu({
+          withShareTicket: true
+        })
+      }
+    }
+  }
+
   handleDownload(url) {
     const downloadTask = wx.downloadFile({
       url,
