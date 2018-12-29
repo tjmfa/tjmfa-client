@@ -84,7 +84,7 @@ class TJMap extends Taro.Component {
           polyline={data.polyline}
           onRegionChange={this.regionchange.bind(this)}
           show-location
-          style="width: 100%; height: 400px;"
+          style="width: 100%; height: 380px;"
         />
         <official-account></official-account>
       </View>
